@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>Contact - MassageBoard</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Raleway:400,700&display=swap"
+    rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
+
+  
+</head>
+
+<body>
+
+  <div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
+    <div class="container py-2 py-md-5">
+      <div class="row align-items-start">
+        <div class="col-md-2">
+          <ul class="custom-menu">
+            <li><a th:href="@{'/index'}">Home</a></li>
+            <li><a th:href="@{'/about'}">About Me</a></li>
+            <li><a th:href="@{'/message'}">Message</a></li>
+            <li><a th:href="@{'/registered'}">registered</a></li>
+            <li class="active"><a th:href="@{'/user'}">Users</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 d-none d-md-block  mr-auto">
+          <div class="tweet d-flex">
+            <span class="icofont-twitter text-white mt-2 mr-3"></span>
+            <div>
+              <p><em>It is always morning somewhere in the world.
+                世界上總是有某個地方可以看到陽光。</em></p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 d-none d-md-block">
+          <h3>Hello</h3>
+          <p> Ordinary people think merely of how they will spend time, a man of intellect tries to use it.
+            常人只想如何消磨時間，智者則努力利用時間。</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <nav class="navbar navbar-light custom-navbar">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">MassageBoard</a>
+
+      <a href="#" class="burger" data-toggle="collapse" data-target="#main-navbar">
+        <span></span>
+      </a>
+
+    </div>
+  </nav>
+
+  <main id="main">
+
+    <div class="site-section pb-0 site-portfolio">
+      <div class="container">
+
+        <div class="row mb-5 align-items-end">
+          <div class="col-md-6" data-aos="fade-up">
+            <h2>UserList</h2>
+            <p class="mb-0">This will be the key to a new world that will
+              bring you closer to me
+            </p>
+          </div>
+
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 mb-5 mb-md-0" data-aos="fade-up">
+            <table class="table table-hover">
+              <thead>
+              <tr>
+                <th data-field="id">ID</th>
+                <th data-field="username">账号</th>
+                <th data-field="email">邮箱</th>
+                <th data-field="operation">操作</th>
+
+              </tr>
+              </thead>
+              <tbody>
+              <tr th:each="user : ${users.list}">
+              <td th:text="${user.id}">1</td>
+              <td th:text="${user.username}">s</td>
+              <td th:text="${user.email}"></td>
+              <td><a th:href="@{'/delete?username=' + ${user.username}}">Delete</a></td>
+              </tr>
+              </tbody>
+              </tbody>
+            </table>
+
+            <nav aria-label="Page navigation">
+              <ul class="pagination">
+                <li th:each="i:${users.navigatepageNums}">
+                  <a th:href="@{'/user?pageNo='+${i}+'&pageSize=5'}" th:text="${i}"></a>
+                </li>
+
+              </ul>
+              <div>
+                <p th:text="每页5条数据"></p>
+              </div>
+            </nav>
+
+          </div>
+
+
+
+
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer mt-5 pt-5" role="contentinfo">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <p class="mb-1">&copy;
+            Thank you very much for watching</p>
+          <div class="credits">
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- Vendor JS Files -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/jquery/jquery-migrate.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendor/easing/easing.min.js"></script>
+  
+  <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>

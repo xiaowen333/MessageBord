@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <title>Contact - MassageBoard</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.png" rel="icon">
+  <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Raleway:400,700&display=swap"
+        rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="vendor/aos/aos.css" rel="stylesheet">
+  <link href="vendor/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+<div class="collapse navbar-collapse custom-navmenu" id="main-navbar">
+  <div class="container py-2 py-md-5">
+    <div class="row align-items-start">
+      <div class="col-md-2">
+        <ul class="custom-menu">
+          <li><a th:href="@{'/index'}">Home</a></li>
+          <li><a th:href="@{'/about'}">About Me</a></li>
+          <li><a th:href="@{'/message'}">Message</a></li>
+          <li><a th:href="@{'/registered'}">registered</a></li>
+          <li class="active"><a th:href="@{'/user'}">Users</a></li>
+        </ul>
+      </div>
+      <div class="col-md-6 d-none d-md-block  mr-auto">
+        <div class="tweet d-flex">
+          <span class="icofont-twitter text-white mt-2 mr-3"></span>
+          <div>
+            <p><em>It is always morning somewhere in the world.
+              世界上總是有某個地方可以看到陽光。</em></p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 d-none d-md-block">
+        <h3>Hello</h3>
+        <p> Ordinary people think merely of how they will spend time, a man of intellect tries to use it.
+          常人只想如何消磨時間，智者則努力利用時間。</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<nav class="navbar navbar-light custom-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">MassageBoard</a>
+
+    <a href="#" class="burger" data-toggle="collapse" data-target="#main-navbar">
+      <span></span>
+    </a>
+
+  </div>
+</nav>
+
+
+
+  <main id="main">
+
+    <div class="site-section pb-0 site-portfolio">
+      <div class="container">
+        <div class="row mb-5 align-items-end">
+          <div class="col-md-6" data-aos="fade-up">
+
+            <h2>About Me</h2>
+
+          </div>
+
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-4 ml-auto order-2" data-aos="fade-up">
+            <h3 class="h3 mb-4">Skills</h3>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>Java</strong>
+                  <span class="ml-auto">80%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>Spring</strong>
+                  <span class="ml-auto">96%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 96%" aria-valuenow="96" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>HTML5/CSS3</strong>
+                  <span class="ml-auto">99%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 99%" aria-valuenow="99" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>Bootsrap</strong>
+                  <span class="ml-auto">87%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 87%" aria-valuenow="87" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>JSP</strong>
+                  <span class="ml-auto">85%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </li>
+              <li class="mb-3">
+                <div class="d-flex mb-1">
+                  <strong>React</strong>
+                  <span class="ml-auto">88%</span>
+                </div>
+                <div class="progress custom-progress">
+                  <div class="progress-bar" role="progressbar" style="width: 88%" aria-valuenow="88" aria-valuemin="0"
+                    aria-valuemax="100"></div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-md-7 mb-5 mb-md-0" data-aos="fade-up">
+            <p><img src="img/sunyalong.jpg" alt="Image" class="img-fluid"></p>
+            <p>Thank you for visiting this website! This website is a web guestbook based on html5. </p>
+            <p>Here, you can leave your own opinions on certain things, and also comment on other people's messages.</p>
+            <p>I hope you like it. If you have any suggestions or comments, please leave me a message.</p>
+
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+
+  </main>
+<footer class="footer mt-5 pt-5" role="contentinfo">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <p class="mb-1">&copy;
+          Thank you very much for watching</p>
+        <div class="credits">
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+  <!-- Vendor JS Files -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/jquery/jquery-migrate.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+  <script src="vendor/easing/easing.min.js"></script>
+  
+  <script src="vendor/isotope/isotope.pkgd.min.js"></script>
+  <script src="vendor/aos/aos.js"></script>
+  <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
